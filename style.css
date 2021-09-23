@@ -1,0 +1,310 @@
+.body {
+
+}
+.header {
+	position: absolute;
+    background: url("img/bg_image3.jpg") no-repeat center top;
+    /*background-size: 110%;*/
+    height: 100%;
+    width: 100%;
+    /*transition: transform .15s;*/
+    /*z-index: 0;*/
+}
+.bg_image {
+    position: absolute;
+    background: url("img/bg_image3.jpg") no-repeat center top;
+    background-size: 110%;
+    height: 100%;
+    width: 100%;
+    /*transition: transform .15s;*/
+    z-index: 0;
+}
+
+
+.en_lang {
+    position: static;
+    top: 5%;
+    left: 95%;
+}
+.lang_buttons {
+    text-align: right;
+}
+.button {
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid gray;
+    padding: 5px 15px;
+    margin-top: 20px;
+    margin-right: 0;
+}
+.en_lang {
+    position: static;
+    top: 5%;
+    left: 95%;
+}
+
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 4px 4px 0 #e3f2fd;
+}
+
+    /* Style the buttons that are used to open the tab content */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+    }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.news {
+    background-color: green;
+    height: auto;
+    width: auto;
+}
+
+.container {
+    max-width: 600px;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs__links {
+    display: flex;
+    flex-direction: row;
+    order: 0;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border: 1px solid #e3f2fd;
+    box-shadow: 0 2px 4px 0 #e3f2fd;
+}
+
+    .tabs__links > a {
+        display: inline-block;
+        text-decoration: none;
+        color: #1976d2;
+        padding: 6px 10px;
+        text-align: center;
+    }
+
+        .tabs__links > a:hover {
+            background-color: rgba(227, 242, 253, 0.3);
+        }
+
+.tabs > #content-1:target ~ .tabs__links > a[href="#content-1"],
+.tabs > #content-2:target ~ .tabs__links > a[href="#content-2"],
+.tabs > #content-3:target ~ .tabs__links > a[href="#content-3"] {
+    background-color: #bbdefb;
+    cursor: default;
+}
+
+.tabs > div:not(.tabs__links) {
+    display: none;
+    order: 1;
+    flex-grow: 1;
+}
+
+@media (min-width: 576px) {
+    .tabs {
+        flex-direction: row;
+    }
+
+    .tabs__links {
+        flex-direction: column;
+        border: none;
+        box-shadow: none;
+    }
+
+        .tabs__links > a {
+            border: 1px solid #e3f2fd;
+            box-shadow: 0 2px 4px 0 #e3f2fd;
+            margin-bottom: 8px;
+        }
+
+            .tabs__links > a:last-child {
+                margin-bottom: 0;
+            }
+
+    .tabs > div:not(.tabs__links) {
+        padding-left: 15px;
+    }
+}
+
+.tabs > div:target {
+    display: block;
+}
+.content {
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    background-color: rgba(0,0,0,0.5);
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.cardcontainer {
+    /*margin: 10px;*/
+    /*padding: 10px;*/
+    width: 100%;
+    /*height: 90%;*/
+    align-items: center;
+}
+.card {
+    transition: transform .15s;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+.card:hover {
+    transform: scale(1.2);
+    transition: transform .5s;
+}
+.scroll_string {
+    position: absolute;
+    top: 84.3%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.heading {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.arrow-down {
+    margin: 30px;
+    position: absolute;
+    top: 88.4%;
+    left: 48.5%;
+    transform: translate(-48.5%);
+}
+.arrow-down span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    margin: -16px;
+    animation: arrow-down 2s infinite;
+}
+.arrow-down span:nth-child(2){
+    animation-delay: -0.2s;
+}
+.arrow-down span:nth-child(3){
+    animation-delay: -0.4s;
+}
+@keyframes arrow-down {
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px,-20px);
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px,20px);
+    }
+}
+.f_dev {
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+}
+.b_dev {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.contacts {
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.card_f_dev {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+}
+.card_b_dev {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%);
+}
+.card_contacts {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%);
+}
